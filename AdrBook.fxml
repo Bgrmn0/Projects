@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="addrbook.AddressBookController">
+   <children>
+      <Label layoutX="98.0" layoutY="65.0" text="My Address Book" />
+      <Button fx:id="btnClear" layoutX="392.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleClearAction" text="Clear" />
+      <Button fx:id="btnFind" layoutX="436.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleFindAction" text="Find" />
+      <Button fx:id="btnUpdate" layoutX="476.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleUpdateAction" text="Update" />
+      <Button fx:id="btnDelete" layoutX="532.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleDeleteAction" text="Delete" textFill="#e71212" />
+      <ImageView fx:id="myImageView" fitHeight="81.0" fitWidth="93.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@LU.png" />
+         </image></ImageView>
+      <TableView fx:id="contactsTable" layoutX="3.0" layoutY="131.0" onSort="#initialize" prefHeight="270.0" prefWidth="594.0">
+        <columns>
+          <TableColumn fx:id="firstNameColumn" prefWidth="75.0" text="First" />
+          <TableColumn fx:id="lastNameColumn" prefWidth="75.0" text="Last" />
+            <TableColumn fx:id="addressColumn" prefWidth="207.19998168945312" text="Address" />
+            <TableColumn fx:id="cityColumn" prefWidth="95.20001220703125" text="City" />
+            <TableColumn fx:id="stateColumn" prefWidth="56.0" text="State" />
+            <TableColumn fx:id="zipColumn" prefWidth="84.79995727539062" text="Zip" />
+        </columns>
+      </TableView>
+      <TextField fx:id="firstNameField" layoutX="4.0" layoutY="105.0" prefHeight="26.0" prefWidth="76.0" />
+      <TextField fx:id="lastNameField" layoutX="80.0" layoutY="105.0" prefHeight="26.0" prefWidth="76.0" />
+      <TextField fx:id="addressField" layoutX="155.0" layoutY="105.0" prefHeight="26.0" prefWidth="206.0" />
+      <TextField fx:id="cityField" layoutX="360.0" layoutY="105.0" prefHeight="26.0" prefWidth="99.0" />
+      <TextField fx:id="stateField" layoutX="460.0" layoutY="105.0" prefHeight="26.0" prefWidth="55.0" />
+      <TextField fx:id="zipField" layoutX="516.0" layoutY="105.0" prefHeight="26.0" prefWidth="84.0" />
+      <Button fx:id="btnAdd" layoutX="328.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleAddAction" text="Add" textFill="#35bf0f" />
+   </children>
+</AnchorPane>
